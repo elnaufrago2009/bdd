@@ -1,0 +1,38 @@
+#region-teams.container
+  .region
+    .region-title
+      %h1= page_title!('team')
+
+  .region
+    %p
+      %b Image:
+      = @team.image
+    %p
+      %b Nombre:
+      = @team.nombre
+    %p
+      %b Funcion:
+      = @team.funcion
+    %p
+      %b Resumen:
+      = @team.resumen
+    %p
+      %b Facebook:
+      = @team.facebook
+    %p
+      %b Linkening:
+      = @team.linkening
+    %p
+      %b Twitter:
+      = @team.twitter
+    %p
+      %b Googlemas:
+      = @team.googlemas
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_team_path(@team), class: 'btn btn-success'
+        = link_to 'Regresar', teams_path, class: 'btn btn-warning'
+        %br
+        %br

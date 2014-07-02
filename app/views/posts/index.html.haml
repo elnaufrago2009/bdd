@@ -1,0 +1,27 @@
+#region-posts.container
+
+  .region
+    .region-title.page-header
+      %h1= page_title!('posts')
+
+    .region
+      /- if current_admin
+      .admin-control
+        = link_to 'Crear Post', new_post_path, class: 'btn btn-primary'
+      %br
+
+      .row
+        .table-responsive.col-sm-8
+          %table.table
+            %tr
+              %th Title
+              %th Acciones
+
+            - @posts.each do |post|
+              %tr
+                %td= post.title
+                %td
+                  = link_to 'Ver', post, class: 'btn btn-info'
+                  /- if current_admin
+                  = link_to 'Editar', edit_post_path(post), class: 'btn btn-success'
+                  = link_to 'Eliminar', post, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

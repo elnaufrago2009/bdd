@@ -1,0 +1,30 @@
+#region-abouts.container
+  .region
+    .page-header
+      %h1= page_title!('about')
+  .row
+    .col-sm-6
+      %table.table.table-bordered
+        %tr
+          %th Nombre
+          %th Descripcion
+        %tr
+          %td Title
+          %td= @about.title   
+        %tr
+          %td Subtitle
+          %td= @about.subtitle
+        %tr
+          %td Image
+          %td= @about.image
+        %tr
+          %td Content title
+          %td= @about.content_title
+        %tr
+          %td Content
+          %td= @about.content
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_about_path(@about), class: 'btn btn-success'
+        = link_to 'Regresar', abouts_path, class: 'btn btn-warning'

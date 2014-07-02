@@ -1,0 +1,18 @@
+- page_title!('Editando page_option')
+
+#region-page_options.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          page_option
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @page_option, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

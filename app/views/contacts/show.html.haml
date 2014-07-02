@@ -1,0 +1,56 @@
+#region-contacts.container
+  .region
+    .region-title.page-header
+      %h1= page_title!('contact')
+
+  .region
+    %p
+      %b Title:
+      = @contact.title
+    %p
+      %b Subtitle:
+      = @contact.subtitle
+    %p
+      %b Code:
+      = @contact.code
+    %p
+      %b Content title:
+      = @contact.content_title
+    %p
+      %b Content content:
+      = @contact.content_content
+    %p
+      %b Data title:
+      = @contact.data_title
+    %p
+      %b Data subtitle:
+      = @contact.data_subtitle
+    %p
+      %b Data direction:
+      = @contact.data_direction
+    %p
+      %b Data phone:
+      = @contact.data_phone
+    %p
+      %b Data email:
+      = @contact.data_email
+    %p
+      %b Data time:
+      = @contact.data_time
+    %p
+      %b Data facebook:
+      = @contact.data_facebook
+    %p
+      %b Data linkedln:
+      = @contact.data_linkedln
+    %p
+      %b Data twitter:
+      = @contact.data_twitter
+    %p
+      %b Data googlemas:
+      = @contact.data_googlemas
+
+  .region
+    - if current_admin      
+      = link_to 'Editar', edit_contact_path(@contact), class: 'btn btn-success'
+    = link_to 'Regresar', contacts_path, class: 'btn btn-warning'

@@ -1,0 +1,33 @@
+#region-portafolios.container
+  .region
+    .region-title
+      %h1= page_title!('portafolio')
+
+  .region
+    %p
+      %b Title:
+      = @portafolio.title
+    %p
+      %b Subtitle:
+      = @portafolio.subtitle
+    %p
+      %b Content resumen:
+      = @portafolio.content_resumen
+    %p
+      %b Content:
+      = @portafolio.content
+    %p
+      %b Image portafolio big:
+      = @portafolio.image_portafolio_big
+    %p
+      %b Image portafolio medium:
+      = @portafolio.image_portafolio_medium
+    %p
+      %b Image portafolio small:
+      = @portafolio.image_portafolio_small
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_portafolio_path(@portafolio), class: 'btn btn-success'
+    = link_to 'Regresar', portafolios_path, class: 'btn btn-warning'

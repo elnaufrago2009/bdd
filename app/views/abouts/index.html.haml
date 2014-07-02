@@ -1,0 +1,29 @@
+#region-abouts.container
+
+  .region
+    .page-header
+      %h1= page_title!('abouts')
+
+    .region
+      .table-responsive
+        %table.table
+          %thead
+            %tr
+              %th Title
+              %th Subtitle
+              %th Image
+              %th Content title
+              %th Content
+              %th Acciones
+          %tbody
+          - @abouts.each do |about|
+            %tr
+              %td= about.title
+              %td= about.subtitle
+              %td= about.image
+              %td= about.content_title
+              %td= about.content
+              %td                
+                = link_to 'Ver', about, class: 'btn btn-primary'              
+                = link_to 'Editar', edit_about_path(about), class: 'btn btn-success'
+                = link_to 'Eliminar', about, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

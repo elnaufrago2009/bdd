@@ -38,6 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'haml-rails'
+gem 'scaffold-bootstrap3'
+gem 'page_title_helper'
 gem 'inherited_resources'
 gem 'devise'
 gem 'bootstrap-sass'
@@ -45,8 +47,9 @@ gem 'rails_layout'
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
-  gem 'capybara'
+  gem 'capybara'    
   gem 'selenium-webdriver'
+  gem 'simplecov'
 end
 
 gem 'tzinfo-data'

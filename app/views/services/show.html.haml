@@ -1,0 +1,112 @@
+#region-services.container
+  .region
+    .region-title.page-header
+      %h1= page_title!('service')
+
+  .region
+    %p
+      %b Principal title:
+      = @service.principal_title
+    %p
+      %b Principal subtitle:
+      = @service.principal_subtitle
+    %p
+      %b Principal image:
+      = @service.principal_image
+    %p
+      %b Content principal title:
+      = @service.content_principal_title
+    %p
+      %b Content principal content:
+      = @service.content_principal_content
+    %p
+      %b Content segundario title:
+      = @service.content_segundario_title
+    %p
+      %b Content segundario content:
+      = @service.content_segundario_content
+    %p
+      %b Tab one title:
+      = @service.tab_one_title
+    %p
+      %b Tab one content:
+      = @service.tab_one_content
+    %p
+      %b Tab one image:
+      = @service.tab_one_image
+    %p
+      %b Tab two title:
+      = @service.tab_two_title
+    %p
+      %b Tab two content:
+      = @service.tab_two_content
+    %p
+      %b Tab two image:
+      = @service.tab_two_image
+    %p
+      %b Tab three title:
+      = @service.tab_three_title
+    %p
+      %b Tab three content:
+      = @service.tab_three_content
+    %p
+      %b Tab three image:
+      = @service.tab_three_image
+    %p
+      %b Tab four title:
+      = @service.tab_four_title
+    %p
+      %b Tab four content:
+      = @service.tab_four_content
+    %p
+      %b Tab four image:
+      = @service.tab_four_image
+    %p
+      %b Tab five title:
+      = @service.tab_five_title
+    %p
+      %b Tab five content:
+      = @service.tab_five_content
+    %p
+      %b Tab five image:
+      = @service.tab_five_image
+    %p
+      %b Service title:
+      = @service.service_title
+    %p
+      %b Service subtitle:
+      = @service.service_subtitle
+    %p
+      %b Service one title:
+      = @service.service_one_title
+    %p
+      %b Service one content:
+      = @service.service_one_content
+    %p
+      %b Service one image:
+      = @service.service_one_image
+    %p
+      %b Service two title:
+      = @service.service_two_title
+    %p
+      %b Service two content:
+      = @service.service_two_content
+    %p
+      %b Service two image:
+      = @service.service_two_image
+    %p
+      %b Service three title:
+      = @service.service_three_title
+    %p
+      %b Service three content:
+      = @service.service_three_content
+    %p
+      %b Service three image:
+      = @service.service_three_image
+    %br
+    
+  .region
+    .admin-controls
+      - if current_admin
+        = link_to 'Editar', edit_service_path(@service), class: 'btn btn-success'
+      = link_to 'Regresar', services_path, class: 'btn btn-warning'

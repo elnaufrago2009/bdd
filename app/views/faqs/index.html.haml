@@ -1,0 +1,26 @@
+#region-faqs.container
+
+  .region
+    .region-title.page-header
+      %h1= page_title!('faqs')
+
+    .region
+      /- if current_admin
+      .admin-control
+        = link_to 'Crear Faq', new_faq_path, class: 'btn btn-primary'
+      %br
+      .row      
+        .table-responsive.col-sm-8
+          %table.table
+            %tr
+              %th Title
+              %th Acciones
+
+            - @faqs.each do |faq|
+              %tr
+                %td= faq.title
+                %td
+                  = link_to 'Ver', faq, class: 'btn btn-info'
+                  /- if current_admin
+                  = link_to 'Editar', edit_faq_path(faq), class: 'btn btn-success'
+                  = link_to 'Eliminar', faq, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

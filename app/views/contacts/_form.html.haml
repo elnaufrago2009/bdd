@@ -1,0 +1,72 @@
+= form_for @contact, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @contact.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@contact.errors.count, "error")}"
+      %ul
+        - @contact.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :title, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :subtitle, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :subtitle, class: 'form-control'
+  .form-group
+    = f.label :code, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :code, class: 'form-control'
+  .form-group
+    = f.label :content_title, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :content_title, class: 'form-control'
+  .form-group
+    = f.label :content_content, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_area :content_content, class: 'form-control'
+  .form-group
+    = f.label :data_title, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_title, class: 'form-control'
+  .form-group
+    = f.label :data_subtitle, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_subtitle, class: 'form-control'
+  .form-group
+    = f.label :data_direction, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_direction, class: 'form-control'
+  .form-group
+    = f.label :data_phone, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_phone, class: 'form-control'
+  .form-group
+    = f.label :data_email, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_email, class: 'form-control'
+  .form-group
+    = f.label :data_time, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_time, class: 'form-control'
+  .form-group
+    = f.label :data_facebook, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_facebook, class: 'form-control'
+  .form-group
+    = f.label :data_linkedln, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_linkedln, class: 'form-control'
+  .form-group
+    = f.label :data_twitter, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_twitter, class: 'form-control'
+  .form-group
+    = f.label :data_googlemas, class: 'col-sm-2 control-label'
+    .col-sm-5
+      = f.text_field :data_googlemas, class: 'form-control'
+  .form-group
+    .col-sm-2
+    .col-sm-5
+      = f.submit 'Guardar', class: 'btn btn-default'

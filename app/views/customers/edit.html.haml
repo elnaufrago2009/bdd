@@ -1,0 +1,18 @@
+- page_title!('Editando customer')
+
+#region-customers.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          customer
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @customer, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

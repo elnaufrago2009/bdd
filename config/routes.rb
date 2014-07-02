@@ -1,4 +1,24 @@
 Rails.application.routes.draw do
+  resources :page_options
+
+  resources :faqs
+
+  resources :posts
+
+  resources :portafolios
+
+  resources :messages
+
+  resources :contacts
+
+  resources :services
+
+  resources :customers
+
+  resources :teams
+
+  resources :abouts
+
   devise_for :admins
   get 'home/index'
 

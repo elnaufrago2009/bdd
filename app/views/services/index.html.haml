@@ -1,0 +1,27 @@
+#region-services.container
+
+  .region
+    .region-title
+      %h1= page_title!('services')
+
+    .region
+      
+      .admin-control
+        = link_to 'Crear Service', new_service_path, class: 'btn btn-primary'
+        %br
+        %br
+      .table-responsive
+        %table.table
+          %tr
+            %th Principal title
+            %th Principal subtitle
+            %th Acciones
+
+          - @services.each do |service|
+            %tr
+              %td= service.principal_title
+              %td= service.principal_subtitle              
+              %td
+                = link_to 'Ver', service, class: 'btn btn-info'                
+                = link_to 'Editar', edit_service_path(service), class: 'btn btn-success'
+                = link_to 'Eliminar', service, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

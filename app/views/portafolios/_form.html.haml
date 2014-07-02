@@ -1,0 +1,40 @@
+= form_for @portafolio, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @portafolio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@portafolio.errors.count, "error")}"
+      %ul
+        - @portafolio.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :subtitle, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :subtitle, class: 'form-control'
+  .form-group
+    = f.label :content_resumen, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :content_resumen, class: 'form-control'
+  .form-group
+    = f.label :content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :content, class: 'form-control'
+  .form-group
+    = f.label :image_portafolio_big, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :image_portafolio_big, class: 'form-control'
+  .form-group
+    = f.label :image_portafolio_medium, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :image_portafolio_medium, class: 'form-control'
+  .form-group
+    = f.label :image_portafolio_small, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :image_portafolio_small, class: 'form-control'
+  .form-group
+    .col-sm-2  
+    .col-sm-6
+      = f.submit 'Guardar', class: 'btn btn-default'

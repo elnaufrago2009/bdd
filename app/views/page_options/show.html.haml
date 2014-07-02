@@ -1,0 +1,27 @@
+#region-page_options.container
+  .region
+    .region-title
+      %h1= page_title!('page_option')
+
+  .region
+    %p
+      %b Title:
+      = @page_option.title
+    %p
+      %b Subtitle:
+      = @page_option.subtitle
+    %p
+      %b Footer left:
+      = @page_option.footer_left
+    %p
+      %b Footer right:
+      = @page_option.footer_right
+    %p
+      %b Image option logo:
+      = @page_option.image_option_logo
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_page_option_path(@page_option), class: 'btn btn-success'
+    = link_to 'Regresar', page_options_path, class: 'btn btn-warning'

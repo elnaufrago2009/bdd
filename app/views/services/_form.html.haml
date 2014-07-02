@@ -1,0 +1,144 @@
+= form_for @service, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @service.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@service.errors.count, "error")}"
+      %ul
+        - @service.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :principal_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :principal_title, class: 'form-control'
+  .form-group
+    = f.label :principal_subtitle, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :principal_subtitle, class: 'form-control'
+  .form-group
+    = f.label :principal_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :principal_image, class: 'form-control'
+  .form-group
+    = f.label :content_principal_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :content_principal_title, class: 'form-control'
+  .form-group
+    = f.label :content_principal_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :content_principal_content, class: 'form-control'
+  .form-group
+    = f.label :content_segundario_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :content_segundario_title, class: 'form-control'
+  .form-group
+    = f.label :content_segundario_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :content_segundario_content, class: 'form-control'
+  .form-group
+    = f.label :tab_one_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_one_title, class: 'form-control'
+  .form-group
+    = f.label :tab_one_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :tab_one_content, class: 'form-control'
+  .form-group
+    = f.label :tab_one_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_one_image, class: 'form-control'
+  .form-group
+    = f.label :tab_two_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_two_title, class: 'form-control'
+  .form-group
+    = f.label :tab_two_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :tab_two_content, class: 'form-control'
+  .form-group
+    = f.label :tab_two_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_two_image, class: 'form-control'
+  .form-group
+    = f.label :tab_three_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_three_title, class: 'form-control'
+  .form-group
+    = f.label :tab_three_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :tab_three_content, class: 'form-control'
+  .form-group
+    = f.label :tab_three_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_three_image, class: 'form-control'
+  .form-group
+    = f.label :tab_four_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_four_title, class: 'form-control'
+  .form-group
+    = f.label :tab_four_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :tab_four_content, class: 'form-control'
+  .form-group
+    = f.label :tab_four_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_four_image, class: 'form-control'
+  .form-group
+    = f.label :tab_five_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_five_title, class: 'form-control'
+  .form-group
+    = f.label :tab_five_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :tab_five_content, class: 'form-control'
+  .form-group
+    = f.label :tab_five_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :tab_five_image, class: 'form-control'
+  .form-group
+    = f.label :service_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_title, class: 'form-control'
+  .form-group
+    = f.label :service_subtitle, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_subtitle, class: 'form-control'
+  .form-group
+    = f.label :service_one_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_one_title, class: 'form-control'
+  .form-group
+    = f.label :service_one_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_one_content, class: 'form-control'
+  .form-group
+    = f.label :service_one_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_one_image, class: 'form-control'
+  .form-group
+    = f.label :service_two_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_two_title, class: 'form-control'
+  .form-group
+    = f.label :service_two_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_two_content, class: 'form-control'
+  .form-group
+    = f.label :service_two_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_two_image, class: 'form-control'
+  .form-group
+    = f.label :service_three_title, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_three_title, class: 'form-control'
+  .form-group
+    = f.label :service_three_content, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_three_content, class: 'form-control'
+  .form-group
+    = f.label :service_three_image, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_field :service_three_image, class: 'form-control'
+  .form-group
+    .col-sm-2
+    .col-sm-5
+      = f.submit 'Guardar', class: 'btn btn-default'

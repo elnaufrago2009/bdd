@@ -1,0 +1,44 @@
+= form_for @team, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @team.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@team.errors.count, "error")}"
+      %ul
+        - @team.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :image, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :image, class: 'form-control'
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-4
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :funcion, class: 'col-sm-2 control-label'
+    .col-sm-2
+      = f.text_field :funcion, class: 'form-control'
+  .form-group
+    = f.label :resumen, class: 'col-sm-2 control-label'
+    .col-sm-6
+      = f.text_area :resumen, class: 'form-control'
+  .form-group
+    = f.label :facebook, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :facebook, class: 'form-control'
+  .form-group
+    = f.label :linkening, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :linkening, class: 'form-control'
+  .form-group
+    = f.label :twitter, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :twitter, class: 'form-control'
+  .form-group
+    = f.label :googlemas, class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :googlemas, class: 'form-control'
+  .form-group
+    .col-sm-2
+    .col-sm-5
+      = f.submit 'Guardar', class: 'btn btn-default'

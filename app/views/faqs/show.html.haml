@@ -1,0 +1,21 @@
+#region-faqs.container
+  .region
+    .region-title
+      %h1= page_title!('faq')
+
+  .region
+    %p
+      %b Title:
+      = @faq.title
+    %p
+      %b Content:
+      = @faq.content
+    %p
+      %b Image faq:
+      = @faq.image_faq
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_faq_path(@faq), class: 'btn btn-success'
+    = link_to 'Regresar', faqs_path, class: 'btn btn-warning'

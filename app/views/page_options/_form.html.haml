@@ -1,0 +1,30 @@
+= form_for @page_option, :html => { class: 'form-horizontal', role: 'form' } do |f|
+  - if @page_option.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@page_option.errors.count, "error")}"
+      %ul
+        - @page_option.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :title, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    = f.label :subtitle, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :subtitle, class: 'form-control'
+  .form-group
+    = f.label :footer_left, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :footer_left, class: 'form-control'
+  .form-group
+    = f.label :footer_right, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :footer_right, class: 'form-control'
+  .form-group
+    = f.label :image_option_logo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :image_option_logo, class: 'form-control'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'
