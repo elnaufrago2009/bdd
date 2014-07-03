@@ -8,23 +8,25 @@
 
   .form-group
     = f.label :title, class: 'col-sm-2 control-label'
-    .col-sm-10
+    .col-sm-6
       = f.text_field :title, class: 'form-control'
   .form-group
     = f.label :subtitle, class: 'col-sm-2 control-label'
-    .col-sm-10
+    .col-sm-6
       = f.text_field :subtitle, class: 'form-control'
   .form-group
     = f.label :footer_left, class: 'col-sm-2 control-label'
-    .col-sm-10
+    .col-sm-6
       = f.text_field :footer_left, class: 'form-control'
   .form-group
     = f.label :footer_right, class: 'col-sm-2 control-label'
-    .col-sm-10
+    .col-sm-6
       = f.text_field :footer_right, class: 'form-control'
   .form-group
     = f.label :image_option_logo, class: 'col-sm-2 control-label'
-    .col-sm-10
+    .col-sm-6
       = f.text_field :image_option_logo, class: 'form-control'
-  .actions
-    = f.submit 'Guardar', class: 'btn btn-default'
+  .form-group
+    .col-sm-2
+    .col-sm-5  
+      = f.submit 'Guardar', class: 'btn btn-default'
