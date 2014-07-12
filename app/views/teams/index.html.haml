@@ -2,16 +2,12 @@
 
   .region
     .region-title
-      .page-header
-        .row
-          .col-sm-6
-            %h1= page_title!('teams')
-          .col-sm-6      
-            %br
-            - if current_admin
-              .admin-control
-                = link_to 'Crear Team', new_team_path, class: 'btn btn-primary pull-right'    
-
+      .page-header                  
+        %h1= page_title!('Teams')                  
+        /- if current_admin
+      .admin-control
+        = link_to 'Crear Team', new_team_path, class: 'btn btn-primary'    
+      %br
     .region
       .table-responsive
         %table.table.table-bordered.table-striped
@@ -29,7 +25,7 @@
 
           - @teams.each do |team|
             %tr
-              %td= team.image
+              %td= team.image_team
               %td= team.nombre
               %td= team.funcion
               %td= team.resumen

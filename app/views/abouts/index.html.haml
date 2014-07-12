@@ -5,6 +5,8 @@
       %h1= page_title!('abouts')
 
     .region
+      = link_to 'Crear About', new_about_path, class: 'btn btn-primary'
+      %br
       .table-responsive
         %table.table
           %thead
@@ -20,7 +22,7 @@
             %tr
               %td= about.title
               %td= about.subtitle
-              %td= about.image
+              %td= about.image_about
               %td= about.content_title
               %td= about.content
               %td                

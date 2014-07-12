@@ -3,7 +3,7 @@ class CreateServices < ActiveRecord::Migration
     create_table :services do |t|
       t.string :principal_title
       t.string :principal_subtitle
-      t.string :principal_image
+      t.string :image_principal_service
       t.string :content_principal_title
       t.text :content_principal_content
       t.string :content_segundario_title

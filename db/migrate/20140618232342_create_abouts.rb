@@ -3,7 +3,7 @@ class CreateAbouts < ActiveRecord::Migration
     create_table :abouts do |t|
       t.string :title
       t.string :subtitle
-      t.string :image
+      t.string :image_about
       t.string :content_title
       t.text :content
 

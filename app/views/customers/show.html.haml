@@ -1,18 +1,18 @@
 #region-customers.container
   .region
-    .region-title
+    .region-title.page-header
       %h1= page_title!('customer')
 
   .region
     %p
       %b Image:
-      = @customer.image
+      = @customer.image_customer
     %p
       %b Nombre:
       = @customer.nombre
 
   .region
-    - if current_admin
-      .admin-controls
-        = link_to 'Editar', edit_customer_path(@customer), class: 'btn btn-success'
-    = link_to 'Regresar', customers_path, class: 'btn btn-warning'
+    /- if current_admin
+    .admin-controls
+      = link_to 'Editar', edit_customer_path(@customer), class: 'btn btn-success'
+      = link_to 'Regresar', customers_path, class: 'btn btn-warning'

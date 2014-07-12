@@ -1,7 +1,7 @@
 class CreateTeams < ActiveRecord::Migration
   def change
     create_table :teams do |t|
-      t.string :image
+      t.string :image_team
       t.string :nombre
       t.string :funcion
       t.text :resumen

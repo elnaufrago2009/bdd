@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140702192810) do
   create_table "abouts", force: true do |t|
     t.string   "title"
     t.string   "subtitle"
-    t.string   "image"
+    t.string   "image_about"
     t.string   "content_title"
     t.text     "content"
     t.datetime "created_at"
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 20140702192810) do
   end
 
   create_table "customers", force: true do |t|
-    t.string   "image"
+    t.string   "image_customer"
     t.string   "nombre"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -117,46 +117,8 @@ ActiveRecord::Schema.define(version: 20140702192810) do
     t.datetime "updated_at"
   end
 
-  create_table "services", force: true do |t|
-    t.string   "principal_title"
-    t.string   "principal_subtitle"
-    t.string   "principal_image"
-    t.string   "content_principal_title"
-    t.text     "content_principal_content"
-    t.string   "content_segundario_title"
-    t.text     "content_segundario_content"
-    t.string   "tab_one_title"
-    t.text     "tab_one_content"
-    t.string   "tab_one_image"
-    t.string   "tab_two_title"
-    t.text     "tab_two_content"
-    t.string   "tab_two_image"
-    t.string   "tab_three_title"
-    t.text     "tab_three_content"
-    t.string   "tab_three_image"
-    t.string   "tab_four_title"
-    t.text     "tab_four_content"
-    t.string   "tab_four_image"
-    t.string   "tab_five_title"
-    t.text     "tab_five_content"
-    t.string   "tab_five_image"
-    t.string   "service_title"
-    t.string   "service_subtitle"
-    t.string   "service_one_title"
-    t.string   "service_one_content"
-    t.string   "service_one_image"
-    t.string   "service_two_title"
-    t.string   "service_two_content"
-    t.string   "service_two_image"
-    t.string   "service_three_title"
-    t.string   "service_three_content"
-    t.string   "service_three_image"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "teams", force: true do |t|
-    t.string   "image"
+    t.string   "image_team"
     t.string   "nombre"
     t.string   "funcion"
     t.text     "resumen"

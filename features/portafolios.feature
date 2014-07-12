@@ -25,3 +25,9 @@ And I fill in "portafolio_image_portafolio_small" with "edit_prueba"
 And I press "Guardar"
 Then I should see "Portafolio editado correctamente"
 
+Scenario: deleting portafolio
+Given existing register portafolio
+Then I visit the "/portafolios" page
+Then I follow "Eliminar" with "/portafolios/1"
+When I accept the "¿Estás seguro?" alert
+Then I should see "portafolio eliminada correctamente."

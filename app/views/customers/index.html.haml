@@ -1,28 +1,30 @@
 #region-customers.container
 
   .region
-    .region-title
+    .region-title.page-header
       %h1= page_title!('customers')
 
-    .region
-      - if current_admin
-        .admin-control
-          = link_to 'Crear Customer', new_customer_path, class: 'btn btn-primary'
 
-      .table-responsive
+    .region
+      /- if current_admin
+      .admin-control
+        = link_to 'Crear Customer', new_customer_path, class: 'btn btn-primary'
+    %br
+    .row
+      .table-responsive.col-sm-7
         %table.table
           %tr
             %th Image
             %th Nombre
-            %th
-            %th
-            %th
+            %th Acciones
+
 
           - @customers.each do |customer|
             %tr
-              %td= customer.image
+              %td= customer.image_customer
               %td= customer.nombre
-              %td= link_to 'Ver', customer, class: 'btn btn-info'
-              - if current_admin
-                %td= link_to 'Editar', edit_customer_path(customer), class: 'btn btn-success'
-                %td= link_to 'Eliminar', customer, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+              %td
+                = link_to 'Ver', customer, class: 'btn btn-info'
+                /- if current_admin
+                = link_to 'Editar', edit_customer_path(customer), class: 'btn btn-success'
+                = link_to 'Eliminar', customer, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

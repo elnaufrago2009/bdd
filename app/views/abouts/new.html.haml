@@ -3,7 +3,7 @@
 #region-abouts.container
 
   .region
-    .region-title
+    .region-title.page-header
       %h1
         Creando
         %b
@@ -11,4 +11,7 @@
 
   .region
     = render 'form'
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'
     
